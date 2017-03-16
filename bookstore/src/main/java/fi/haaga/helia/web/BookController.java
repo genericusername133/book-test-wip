@@ -30,7 +30,7 @@ public class BookController {
 		model.addAttribute("books", books);
     	return "books";
     }
-/*
+
     @RequestMapping(value = "add")
     public String addBook(Model model){
     	model.addAttribute("book", new Book());
@@ -54,7 +54,7 @@ public class BookController {
     	repository.delete(bookId);
         return "redirect:/books";
     }    
-    */
+    
     @RequestMapping(value = "getbooks", method = RequestMethod.GET)
     public @ResponseBody List<Book> getBooks() {
             return (List<Book>)repository.findAll();
